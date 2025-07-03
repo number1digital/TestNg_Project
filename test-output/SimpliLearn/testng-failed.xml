@@ -9,7 +9,10 @@
           <include name="LoginFailureTestFromExcel"/>
           <include name="CloseExcel"/>
           <include name="TearDown"/>
+          <include name="LockedUserLoginFailureTest"/>
+          <include name="LoginSuccessTest"/>
           <include name="SetUpExcel"/>
+          <include name="LoginFailureTest"/>
         </methods>
       </class> <!-- swaglab_test.LoginTest -->
     </classes>

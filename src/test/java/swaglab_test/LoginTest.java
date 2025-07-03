@@ -2,6 +2,7 @@ package swaglab_test;
 
 import java.time.Duration;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -54,19 +55,27 @@ public class LoginTest extends BaseClass {
 	
 	@Test 
 	public void LoginFailureTestFromExcel() {
-		
-		String UserNameVal = sheet.getRow(1).getCell(0).getStringCellValue();
-		String PasswordVal = sheet.getRow(1).getCell(1).getStringCellValue();
-		
-		LoginPage lp = new LoginPage();
-		lp.LoginFunction(UserNameVal, PasswordVal);
-		
-		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
-		Assert.assertEquals(ErrorMsg.getText(), "Epic sadface: Username and password do not match any user in this service");
-		
-		sheet.getRow(3).createCell(2).setCellValue("DONE");
-	
+
+	    String UserNameVal = sheet.getRow(1).getCell(0).getStringCellValue();
+	    String PasswordVal = sheet.getRow(1).getCell(1).getStringCellValue();
+	    
+	    LoginPage lp = new LoginPage();
+	    lp.LoginFunction(UserNameVal, PasswordVal);
+	    
+	    WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
+	    Assert.assertEquals(ErrorMsg.getText(), 
+	        "Epic sadface: Username and password do not match any user in this service");
+
+	    // FIXED part: safely write result
+	    int writeRowNum = 3;
+	    int writeCellNum = 2;
+	    XSSFRow row = sheet.getRow(writeRowNum);
+	    if (row == null) {
+	        row = sheet.createRow(writeRowNum);
+	    }
+	    row.createCell(writeCellNum).setCellValue("DONE");
 	}
+
 	
 	
 

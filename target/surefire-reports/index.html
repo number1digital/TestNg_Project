@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Simplilearn" class="navigator-link">
-              <span class="suite-name border-failed">Simplilearn</span>
+              <span class="suite-name border-passed">Simplilearn</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Simplilearn" class="hide-methods failed suite-Simplilearn"> (hide)</a> <!-- hide-methods failed suite-Simplilearn -->
-                      <a href="#" panel-name="suite-Simplilearn" class="show-methods failed suite-Simplilearn"> (show)</a> <!-- show-methods failed suite-Simplilearn -->
-                    </span>
-                    <div class="method-list-content failed suite-Simplilearn">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Simplilearn" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginFailureTestFromExcel">LoginFailureTestFromExcel</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Simplilearn -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -126,6 +112,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Simplilearn" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginFailureTestFromExcel">LoginFailureTestFromExcel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Simplilearn" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginSuccessTest">LoginSuccessTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -141,25 +132,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Simplilearn" class="panel Simplilearn">
-          <div class="suite-Simplilearn-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">swaglab_test.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginFailureTestFromExcel">
-                  </a> <!-- LoginFailureTestFromExcel -->
-                  <span class="method-name">LoginFailureTestFromExcel</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.createCell(int)&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; is null
-	at swaglab_test.LoginTest.LoginFailureTestFromExcel(LoginTest.java:67)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Simplilearn-class-failed -->
           <div class="suite-Simplilearn-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -178,6 +150,13 @@
                   <a name="LoginFailureTest">
                   </a> <!-- LoginFailureTest -->
                   <span class="method-name">LoginFailureTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginFailureTestFromExcel">
+                  </a> <!-- LoginFailureTestFromExcel -->
+                  <span class="method-name">LoginFailureTestFromExcel</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -243,26 +222,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginFailureTest')
+data.setCell(0, 1, 'LoginFailureTestFromExcel')
 data.setCell(0, 2, 'swaglab_test.LoginTest')
-data.setCell(0, 3, 1661);
+data.setCell(0, 3, 1449);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'LoginSuccessTest')
+data.setCell(1, 1, 'LockedUserLoginFailureTest')
 data.setCell(1, 2, 'swaglab_test.LoginTest')
-data.setCell(1, 3, 1279);
+data.setCell(1, 3, 1311);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'LockedUserLoginFailureTest')
+data.setCell(2, 1, 'LoginFailureTest')
 data.setCell(2, 2, 'swaglab_test.LoginTest')
-data.setCell(2, 3, 1200);
+data.setCell(2, 3, 1157);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'LoginFailureTestFromExcel')
+data.setCell(3, 1, 'LoginSuccessTest')
 data.setCell(3, 2, 'swaglab_test.LoginTest')
-data.setCell(3, 3, 1014);
+data.setCell(3, 3, 1010);
 window.suiteTableData['Simplilearn']= { tableData: data, tableDiv: 'times-div-Simplilearn'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Simplilearn">
               </div> <!-- times-div-Simplilearn -->
             </div> <!-- times-div -->
@@ -295,57 +274,55 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">1708 ms</span>
+                <span class="method-start">1253 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">LoginFailureTestFromExcel</span>
-                <span class="method-start">9291 ms</span>
+                <span class="method-start">10218 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">10762 ms</span>
+                <span class="method-start">11669 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">11205 ms</span>
+                <span class="method-start">12143 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginSuccessTest</span>
-                <span class="method-start">17149 ms</span>
+                <span class="method-start">18178 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">18428 ms</span>
+                <span class="method-start">19189 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">18878 ms</span>
+                <span class="method-start">19520 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginFailureTest</span>
-                <span class="method-start">24801 ms</span>
+                <span class="method-start">30845 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">26462 ms</span>
+                <span class="method-start">32002 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">26958 ms</span>
+                <span class="method-start">32787 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LockedUserLoginFailureTest</span>
-                <span class="method-start">32213 ms</span>
+                <span class="method-start">41481 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">33413 ms</span>
+                <span class="method-start">42792 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">CloseExcel</span>
-                <span class="method-start">33813 ms</span>
+                <span class="method-start">43173 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
