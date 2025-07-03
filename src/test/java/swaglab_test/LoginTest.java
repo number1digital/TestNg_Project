@@ -1,82 +1,94 @@
 package swaglab_test;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import swaglab_pages.LoginPage;
-
-import org.testng.Assert;
 
 
 @Listeners(Listener.class)
 
 public class LoginTest extends BaseClass {
 
-	@Test (priority = 0)
+	@Test(priority = 0)
 	public void LoginSuccessTest() {
 
 		LoginPage lp = new LoginPage();
 		lp.LoginFunction("standard_user", "secret_sauce");
-		
+
 		WebElement ProductTitle = driver.findElement(By.className("title"));
 		Assert.assertEquals(ProductTitle.getText(), "Products");
-		
+
 	}
 
-	@Test (priority = 1)
+	@Test(priority = 1)
 	public void LoginFailureTest() {
 
 		LoginPage lp = new LoginPage();
 		lp.LoginFunction("standard_user", "secret_test");
-		
-		
+
 		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
-		Assert.assertEquals(ErrorMsg.getText(), "Epic sadface: Username and password do not match any user in this service");
-		
+		Assert.assertEquals(ErrorMsg.getText(),
+				"Epic sadface: Username and password do not match any user in this service");
+
 	}
-	
-	@Test (priority = 2)
+
+	@Test
 	public void LockedUserLoginFailureTest() {
-		
+
 		LoginPage lp = new LoginPage();
 		lp.LoginFunction("locked_out_user", "secret_sauce");
-		
+
 		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
 		Assert.assertEquals(ErrorMsg.getText(), "Epic sadface: Sorry, this user has been locked out.");
-		
+
 	}
-	
-	@Test 
+
+	@Test
 	public void LoginFailureTestFromExcel() {
 
-	    String UserNameVal = sheet.getRow(1).getCell(0).getStringCellValue();
-	    String PasswordVal = sheet.getRow(1).getCell(1).getStringCellValue();
-	    
-	    LoginPage lp = new LoginPage();
-	    lp.LoginFunction(UserNameVal, PasswordVal);
-	    
-	    WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
-	    Assert.assertEquals(ErrorMsg.getText(), 
-	        "Epic sadface: Username and password do not match any user in this service");
+		String UserNameVal = sheet.getRow(1).getCell(0).getStringCellValue();
+		String PasswordVal = sheet.getRow(1).getCell(1).getStringCellValue();
 
-	    // FIXED part: safely write result
-	    int writeRowNum = 3;
-	    int writeCellNum = 2;
-	    XSSFRow row = sheet.getRow(writeRowNum);
-	    if (row == null) {
-	        row = sheet.createRow(writeRowNum);
-	    }
-	    row.createCell(writeCellNum).setCellValue("DONE");
+		LoginPage lp = new LoginPage();
+		lp.LoginFunction(UserNameVal, PasswordVal);
+
+		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
+		Assert.assertEquals(ErrorMsg.getText(),
+				"Epic sadface: Username and password do not match any user in this service");
+
+		sheet.getRow(1).createCell(2).setCellValue("Completed");
+
 	}
 
-	
-	
+	@Test
+	public void LoginFailureTestFromProperties() throws IOException {
+
+		FileReader reader = new FileReader("data.properties");
+		Properties prop = new Properties();
+		prop.load(reader);
+		
+		String UserNameVal = prop.getProperty("username");
+		String PasswordVal = prop.getProperty("password");
+
+		LoginPage lp = new LoginPage();
+		lp.LoginFunction(UserNameVal, PasswordVal);
+
+		WebElement ErrorMsg = driver.findElement(By.xpath("//h3[@data-test='error']"));
+		Assert.assertEquals(ErrorMsg.getText(),
+				"Epic sadface: Username and password do not match any user in this service");
+
+	}
 
 }

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\janar\AppData\Local\Temp\testng-eclipse-1306730999\testng-customsuite.xml</span>
+                    <span>C:\Users\janar\AppData\Local\Temp\testng-eclipse--1296169763\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LockedUserLoginFailureTest">LockedUserLoginFailureTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginFailureTest">LoginFailureTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginFailureTestFromExcel">LoginFailureTestFromExcel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginFailureTestFromProperties">LoginFailureTestFromProperties</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="swaglab_test.LoginTest" class="method navigator-link" hash-for-method="LoginSuccessTest">LoginSuccessTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,9 +145,37 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="LockedUserLoginFailureTest">
+                  </a> <!-- LockedUserLoginFailureTest -->
+                  <span class="method-name">LockedUserLoginFailureTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginFailureTest">
+                  </a> <!-- LoginFailureTest -->
+                  <span class="method-name">LoginFailureTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="LoginFailureTestFromExcel">
                   </a> <!-- LoginFailureTestFromExcel -->
                   <span class="method-name">LoginFailureTestFromExcel</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginFailureTestFromProperties">
+                  </a> <!-- LoginFailureTestFromProperties -->
+                  <span class="method-name">LoginFailureTestFromProperties</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginSuccessTest">
+                  </a> <!-- LoginSuccessTest -->
+                  <span class="method-name">LoginSuccessTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +183,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\janar\AppData\Local\Temp\testng-eclipse-1306730999\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\janar\AppData\Local\Temp\testng-eclipse--1296169763\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +192,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;swaglab_test.LoginTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;LoginFailureTestFromExcel&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- swaglab_test.LoginTest --&gt;
+      &lt;class name=&quot;swaglab_test.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -188,16 +232,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginFailureTestFromExcel')
+data.setCell(0, 1, 'LoginFailureTest')
 data.setCell(0, 2, 'swaglab_test.LoginTest')
-data.setCell(0, 3, 747);
+data.setCell(0, 3, 1269);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'LockedUserLoginFailureTest')
+data.setCell(1, 2, 'swaglab_test.LoginTest')
+data.setCell(1, 3, 1006);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'LoginSuccessTest')
+data.setCell(2, 2, 'swaglab_test.LoginTest')
+data.setCell(2, 3, 971);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'LoginFailureTestFromExcel')
+data.setCell(3, 2, 'swaglab_test.LoginTest')
+data.setCell(3, 3, 930);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'LoginFailureTestFromProperties')
+data.setCell(4, 2, 'swaglab_test.LoginTest')
+data.setCell(4, 3, 914);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 747 ms</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,20 +272,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">swaglab_test.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">LockedUserLoginFailureTest</span>
-                <br/>
-                <span class="ignored-method-name">LoginSuccessTest</span>
-                <br/>
-                <span class="ignored-method-name">LoginFailureTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -241,19 +290,67 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">SetUp</span>
-                <span class="method-start">1290 ms</span>
+                <span class="method-start">1532 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginFailureTestFromExcel</span>
-                <span class="method-start">6806 ms</span>
+                <span class="method-name">LockedUserLoginFailureTest</span>
+                <span class="method-start">9458 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">7555 ms</span>
+                <span class="method-start">10474 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">SetUp</span>
+                <span class="method-start">10892 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginFailureTestFromExcel</span>
+                <span class="method-start">16545 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">17477 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">SetUp</span>
+                <span class="method-start">17806 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginFailureTestFromProperties</span>
+                <span class="method-start">24417 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">25333 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">SetUp</span>
+                <span class="method-start">25879 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginSuccessTest</span>
+                <span class="method-start">31350 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">32323 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">SetUp</span>
+                <span class="method-start">32773 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginFailureTest</span>
+                <span class="method-start">38581 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">39851 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">CloseExcel</span>
-                <span class="method-start">8001 ms</span>
+                <span class="method-start">40250 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
